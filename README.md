@@ -1,6 +1,6 @@
 # PR_10_API
 
-## Live Demo : [PR_10_API](https://pr-10-api.vercel.app/)
+## Live Demo : [PR_10_API](https://pr-10-api-git-main-nurul-shaikhs-projects.vercel.app/)
 
 # Weather App
 
