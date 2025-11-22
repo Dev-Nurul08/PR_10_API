@@ -1,0 +1,197 @@
+/* Global Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #1e90ff, #3cb371); /* आकर्षक ग्रेडिएंट बैकग्राउंड */
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Main Container */
+.weather-container {
+    width: 100%;
+    max-width: 450px; /* अधिकतम चौड़ाई सेट करें */
+    background-color: rgba(0, 0, 0, 0.4); /* हल्का पारदर्शी बैकग्राउंड */
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px); /* ब्लर इफ़ेक्ट */
+}
+
+/* Search Box Styling */
+.search-box {
+    display: flex;
+    margin-bottom: 25px;
+    border-radius: 25px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.search-input {
+    flex-grow: 1;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    outline: none;
+    color: #333;
+}
+
+.search-button {
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 18px;
+}
+
+.search-button:hover {
+    background-color: #e55337;
+}
+
+/* Weather Card Styling */
+.weather-card {
+    text-align: center;
+}
+
+.city-name {
+    font-size: 2.2em;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.date-time {
+    font-size: 0.9em;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+/* Main Weather Data */
+.main-weather-data {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.icon-and-temp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.weather-icon {
+    width: 100px; /* आइकन का साइज़ */
+}
+
+.temperature-box {
+    margin-left: 10px;
+}
+
+.temperature {
+    font-size: 4.5em; /* बड़ा तापमान फ़ॉन्ट */
+    font-weight: 600;
+    line-height: 1;
+}
+
+.weather-type {
+    font-size: 1.5em;
+    font-weight: 400;
+    text-transform: capitalize; /* पहला अक्षर बड़ा करें */
+}
+
+/* Details Grid */
+.details-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 बराबर कॉलम */
+    gap: 15px;
+    text-align: center;
+}
+
+.detail-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 15px 10px;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.detail-card:hover {
+    transform: translateY(-5px);
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.detail-icon {
+    font-size: 1.5em;
+    margin-bottom: 5px;
+    color: #ffd700; /* सुनहरा रंग */
+}
+
+.detail-value {
+    font-size: 1.3em;
+    font-weight: 600;
+    margin-bottom: 2px;
+}
+
+.detail-label {
+    font-size: 0.75em;
+    opacity: 0.8;
+}
+
+/* --- Responsiveness (प्रतिक्रियाशीलता) --- */
+/* Small Screens (जैसे मोबाइल पोर्ट्रेट) */
+@media (max-width: 500px) {
+    .weather-container {
+        padding: 20px;
+        margin: 10px;
+        max-width: 95%;
+    }
+
+    .city-name {
+        font-size: 1.8em;
+    }
+
+    .temperature {
+        font-size: 3.5em;
+    }
+
+    .weather-type {
+        font-size: 1.2em;
+    }
+    
+    .details-grid {
+        grid-template-columns: 1fr; /* मोबाइल पर 1 कॉलम */
+    }
+
+    .detail-card {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: left;
+        padding: 10px 15px;
+    }
+
+    .detail-label {
+        order: 1;
+        flex-grow: 1;
+        margin-left: 10px;
+    }
+
+    .detail-value {
+        order: 3;
+    }
+
+    .detail-icon {
+        order: 0;
+    }
+}

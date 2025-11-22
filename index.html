@@ -3,113 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dog Breed Explorer</title>
-    <!-- Bootstrap 5 CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        .container {
-            max-width: 600px;
-            margin-top: 50px;
-        }
-        .dog-card {
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        }
-        .dog-image {
-            height: 300px;
-            object-fit: cover;
-            width: 100%;
-        }
-        .controls-section {
-            padding: 20px;
-            background-color: #f8f9fa;
-            border-radius: 0 0 15px 15px;
-        }
-    </style>
+    <title>Weather App</title>
+    <link rel="stylesheet" href="./index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
-<body class="bg-light">
-    <div class="container">
-        <div class="dog-card">
-            <!-- Dog Image Section -->
-            <div class="bg-white p-3 text-center">
-                <h3 class="mb-3">Dog Breed Explorer</h3>
-                <img src="https://images.unsplash.com/photo-1552053831-71594a27632d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" 
-                     alt="Golden Retriever" 
-                     class="dog-image rounded">
-            </div>
-            
-            <!-- Controls Section -->
-            <div class="controls-section">
-                <div class="row g-3">
-                    <div class="col-md-8">
-                        <select class="form-select" id="breedSelect">
-                            <option selected>Select a dog breed...</option>
-                            <option value="golden-retriever">Golden Retriever</option>
-                            <option value="german-shepherd">German Shepherd</option>
-                            <option value="french-bulldog">French Bulldog</option>
-                            <option value="siberian-husky">Siberian Husky</option>
-                            <option value="poodle">Poodle</option>
-                            <option value="beagle">Beagle</option>
-                            <option value="bulldog">Bulldog</option>
-                            <option value="labrador">Labrador Retriever</option>
-                            <option value="rottweiler">Rottweiler</option>
-                            <option value="dachshund">Dachshund</option>
-                        </select>
-                    </div>
-                    <div class="col-md-4">
-                        <button class="btn btn-primary w-100">Search</button>
-                    </div>
-                </div>
-                
-                <!-- Additional Images Section -->
-                <div class="mt-4">
-                    <h6 class="text-muted mb-3">More Dog Images</h6>
-                    <div class="row g-2">
-                        <div class="col-4">
-                            <img src="https://images.unsplash.com/photo-1517423568366-8b83523034fd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80" 
-                                 class="img-thumbnail w-100" 
-                                 alt="French Bulldog"
-                                 style="height: 80px; object-fit: cover;">
-                        </div>
-                        <div class="col-4">
-                            <img src="https://images.unsplash.com/photo-1517423738875-5ce310acd3da?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80" 
-                                 class="img-thumbnail w-100" 
-                                 alt="German Shepherd"
-                                 style="height: 80px; object-fit: cover;">
-                        </div>
-                        <div class="col-4">
-                            <img src="https://images.unsplash.com/photo-1517423447168-cb804aafa6e0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80" 
-                                 class="img-thumbnail w-100" 
-                                 alt="Siberian Husky"
-                                 style="height: 80px; object-fit: cover;">
-                        </div>
-                    </div>
-                </div>
-            </div>
+<body>
+
+    <div class="weather-container">
+        <div class="search-box">
+            <input type="text" id="search" placeholder="Enter city name (e.g.: Mumbai, London)" class="search-input">
+            <button id="searchBtn" class="search-button">
+                <i class="fas fa-search"></i> </button>
         </div>
-        
-        <!-- Breed Info Section -->
-        <div class="mt-4 p-3 bg-white rounded shadow-sm">
-            <h5>Breed Information</h5>
-            <div class="row mt-3">
-                <div class="col-md-6">
-                    <p><strong>Breed:</strong> Golden Retriever</p>
-                    <p><strong>Group:</strong> Sporting</p>
-                    <p><strong>Life Span:</strong> 10-12 years</p>
+
+        <div class="weather-card">
+            <h2 class="city-name">...</h2>
+            <p class="date-time">... | ...</p>
+            
+            <div class="main-weather-data">
+                <div class="icon-and-temp">
+                    <img src="https://openweathermap.org/img/wn/04d@2x.png" alt="Weather Icon" id="weatherIcon" class="weather-icon">
+                    <div class="temperature-box">
+                        <span class="temperature">...°C</span>
+                    </div>
                 </div>
-                <div class="col-md-6">
-                    <p><strong>Temperament:</strong> Friendly, Intelligent, Devoted</p>
-                    <p><strong>Weight:</strong> 55-75 lbs</p>
-                    <p><strong>Height:</strong> 21.5-24 inches</p>
+                <p class="weather-type">...</p>
+            </div>
+
+            <div class="details-grid">
+                <div class="detail-card">
+                    <i class="fas fa-temperature-half detail-icon"></i>
+                    <p class="detail-value" id="feelsLike">...</p>
+                    <p class="detail-label">Temp (°C)</p>
+                </div>
+
+                <div class="detail-card">
+                    <i class="fas fa-tint detail-icon"></i>
+                    <p class="detail-value"><span id="humidity">...</span>%</p>
+                    <p class="detail-label">Humidity</p>
+                </div>
+
+                <div class="detail-card">
+                    <i class="fas fa-wind detail-icon"></i>
+                    <p class="detail-value"><span id="wind">...</span> km/h</p>
+                    <p class="detail-label">Wind Speed</p>
                 </div>
             </div>
+
         </div>
     </div>
+    
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
-    <!-- Bootstrap 5 JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-    <script src="./script/script.js"></script>
+    <script src="./script.js"></script> 
 </body>
 </html>
