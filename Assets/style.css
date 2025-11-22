@@ -1,4 +1,4 @@
-/* Global Reset and Base Styles */
+
 * {
     margin: 0;
     padding: 0;
@@ -7,7 +7,7 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #1e90ff, #3cb371); /* आकर्षक ग्रेडिएंट बैकग्राउंड */
+    background: linear-gradient(135deg, #1e90ff, #3cb371); 
     color: #fff;
     min-height: 100vh;
     display: flex;
@@ -16,18 +16,18 @@ body {
     padding: 20px;
 }
 
-/* Main Container */
+
 .weather-container {
     width: 100%;
-    max-width: 450px; /* अधिकतम चौड़ाई सेट करें */
-    background-color: rgba(0, 0, 0, 0.4); /* हल्का पारदर्शी बैकग्राउंड */
+    max-width: 450px; 
+    background-color: rgba(0, 0, 0, 0.4);
     border-radius: 20px;
     padding: 30px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(10px); /* ब्लर इफ़ेक्ट */
+    backdrop-filter: blur(10px); 
 }
 
-/* Search Box Styling */
+
 .search-box {
     display: flex;
     margin-bottom: 25px;
@@ -60,7 +60,7 @@ body {
     background-color: #e55337;
 }
 
-/* Weather Card Styling */
+
 .weather-card {
     text-align: center;
 }
@@ -77,7 +77,7 @@ body {
     margin-bottom: 20px;
 }
 
-/* Main Weather Data */
+
 .main-weather-data {
     border-bottom: 1px solid rgba(255, 255, 255, 0.5);
     padding-bottom: 20px;
@@ -92,7 +92,7 @@ body {
 }
 
 .weather-icon {
-    width: 100px; /* आइकन का साइज़ */
+    width: 100px; 
 }
 
 .temperature-box {
@@ -100,7 +100,7 @@ body {
 }
 
 .temperature {
-    font-size: 4.5em; /* बड़ा तापमान फ़ॉन्ट */
+    font-size: 4.5em; 
     font-weight: 600;
     line-height: 1;
 }
@@ -108,13 +108,13 @@ body {
 .weather-type {
     font-size: 1.5em;
     font-weight: 400;
-    text-transform: capitalize; /* पहला अक्षर बड़ा करें */
+    text-transform: capitalize;
 }
 
 /* Details Grid */
 .details-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 बराबर कॉलम */
+    grid-template-columns: repeat(3, 1fr);
     gap: 15px;
     text-align: center;
 }
@@ -134,7 +134,7 @@ body {
 .detail-icon {
     font-size: 1.5em;
     margin-bottom: 5px;
-    color: #ffd700; /* सुनहरा रंग */
+    color: #ffd700;
 }
 
 .detail-value {
@@ -148,8 +148,8 @@ body {
     opacity: 0.8;
 }
 
-/* --- Responsiveness (प्रतिक्रियाशीलता) --- */
-/* Small Screens (जैसे मोबाइल पोर्ट्रेट) */
+
+
 @media (max-width: 500px) {
     .weather-container {
         padding: 20px;
@@ -170,7 +170,7 @@ body {
     }
     
     .details-grid {
-        grid-template-columns: 1fr; /* मोबाइल पर 1 कॉलम */
+        grid-template-columns: 1fr; 
     }
 
     .detail-card {

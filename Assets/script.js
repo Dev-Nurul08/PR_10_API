@@ -21,9 +21,9 @@ async function getWeather(city) {
 
         if (res.status !== 200) {
            
-            document.querySelector(".city-name").innerText = "शहर नहीं मिला!";
+            document.querySelector(".city-name").innerText = "City Was Not Found!";
             document.querySelector(".temperature").innerText = "--";
-            document.querySelector(".weather-type").innerText = "कृपया सही नाम दर्ज करें।";
+            document.querySelector(".weather-type").innerText = "Enter VAlid Name";
             document.getElementById("weatherIcon").src = "";
             document.getElementById("feelsLike").innerText = "--";
             document.getElementById("humidity").innerText = "--";
